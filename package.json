@@ -1,0 +1,38 @@
+{
+  "name": "@lonnycorp/htmlforge",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build.ts",
+    "check": "bun run typecheck && bun run lint && bun test",
+    "lint": "eslint --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "tsdown": "tsdown"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "@typescript-eslint/parser": "^8.46.3",
+    "eslint": "^9.39.1",
+    "tsdown": "^0.22.2",
+    "typedoc": "^0.28.15",
+    "typescript": "^5"
+  },
+  "repository": {
+    "url": "git+https://github.com/lonnycorp/htmlforge.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module"
+}
